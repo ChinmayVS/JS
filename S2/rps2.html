@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock-Paper-Scissor</title>
+</head>
+
+<script>
+  let computerPick='';
+  const random = Math.random();
+
+  function pickNumber(){    
+    const random = Math.random();
+    console.log(random)
+    if(0<random&&random<1/3){
+      computerPick='rock';
+    }
+    else if(1/3>random&&random<2/3){
+      computerPick='paper';
+    }
+    else{
+      computerPick='scissors';
+    } 
+    return computerPick;
+  }
+
+</script>
+<body>
+  <p>Rock Paper Scissors</p>
+  <button onclick="
+  const computerPick= pickNumber();
+
+  if(computerPick==='rock'){
+    alert(`Tie`);
+  }
+  else if(computerPick==='paper'){
+    alert(`Computer wins`)
+  }
+  else{
+    alert(`You win!`)
+  }
+
+
+
+  ">Rock</button>
+  <button onclick="
+  const computerPick= pickNumber();
+
+
+  if(computerPick==='rock'){
+      alert(`You win!`);
+    }
+    else if(computerPick==='paper'){
+      alert(`Tie`)
+    }
+    else{
+      alert(`Computer wins`)
+    }
+
+
+    
+    ">Paper</button>
+  <button onclick="
+  const computerPick= pickNumber();
+  if(computerPick==='rock'){
+      alert(`Computer wins`);
+    }
+    else if(computerPick==='paper'){
+      alert(`You win!`)
+    }
+    else{
+      alert(`Tie`)
+    }
+
+  ">Scissors</button>
+</body>
+
+</html>

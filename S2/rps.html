@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock-Paper-Scissor</title>
+</head>
+
+<script>
+  
+  let robot=''
+</script>
+<body>
+  <p>Rock Paper Scissors</p>
+  <button onclick="
+    const random = Math.random();
+    console.log(random)
+    if(0<random&&random<1/3){
+      alert('tie');
+    }
+    else if(1/3>random&&random<2/3){
+      alert('Computer Wins');
+    }
+    else{
+      alert('You win!');
+    }
+  ">Rock</button>
+  <button onclick="
+    if(0<random&&random<1/3){
+      alert('Computer wins');
+    }
+    else if(1/3<random&&random<2/3){
+      alert('You Win!');
+    }
+    else{
+      alert('Tie');
+    }
+  ">Paper</button>
+  <button onclick="
+    if(0<random&&random<1/3){
+      alert('You win!');
+    }
+    else if(1/3<random&&random<2/3){
+      alert('Tie');
+    }
+    else{
+      alert('Computer wins');
+    }
+  ">Scissors</button>
+</body>
+
+</html>
