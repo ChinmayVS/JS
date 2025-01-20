@@ -4,29 +4,13 @@
   <title>Rock-Paper-Scissor</title>
 </head>
 
-<script>
-  let computerPick='';
-  const random = Math.random();
 
-  function pickNumber(){    
-    const random = Math.random();
-    console.log(random)
-    if(0<random&&random<1/3){
-      computerPick='rock';
-    }
-    else if(1/3>random&&random<2/3){
-      computerPick='paper';
-    }
-    else{
-      computerPick='scissors';
-    } 
-    return computerPick;
-  }
-
-</script>
 <body>
   <p>Rock Paper Scissors</p>
-  <button onclick="
+
+  
+  <button onclick=
+  "
   const computerPick= pickNumber();
 
   if(computerPick==='rock'){
@@ -38,13 +22,13 @@
   else{
     alert(`You win!`)
   }
+  "
+  >Rock</button>
 
 
-
-  ">Rock</button>
-  <button onclick="
+  <button onclick=
+  "
   const computerPick= pickNumber();
-
 
   if(computerPick==='rock'){
       alert(`You win!`);
@@ -54,13 +38,16 @@
     }
     else{
       alert(`Computer wins`)
-    }
+    }    
+    "
+    >Paper</button>
 
 
-    
-    ">Paper</button>
-  <button onclick="
+
+  <button onclick=
+  "
   const computerPick= pickNumber();
+
   if(computerPick==='rock'){
       alert(`Computer wins`);
     }
@@ -70,8 +57,28 @@
     else{
       alert(`Tie`)
     }
+  "
+  >Scissors</button>
 
-  ">Scissors</button>
+
+
+  <script>
+    function pickNumber(){    
+      let computerPick='';
+      const random = Math.random();      console.log(random)
+      if(0<random&&random<1/3){
+        computerPick='rock';
+      }
+      else if(1/3>random&&random<2/3){
+        computerPick='paper';
+      }
+      else{
+        computerPick='scissors';
+      } 
+      return computerPick;
+    }
+  
+  </script>
 </body>
 
 </html>
