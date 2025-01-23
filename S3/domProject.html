@@ -11,18 +11,26 @@ Subscribe</button>
   <a href="http://127.0.0.1:5500/S2/rps2.html">Click here</a>
 
   <p>Amazon Shipping Calculator</p>
-  < 
+  <input placeholder="Cost of order" class="js-cost-input">
+  <button onclick="
+  calculateTotal();
+  ">Calculate</button>
 
   <script>
+    function calculateTotal(){
+      const inputElement = document.querySelector('.js-cost-input');  
+      const cost = inputElement.value;                                 
+
+    } 
     function subscribe(){
       
-  const buttonElement= document.querySelector('.Subscribe');
-  if (buttonElement.innerText === 'Subscribe'){
-    buttonElement.innerHTML = 'Subscribed';
-  }
-  else{
-    buttonElement.innerHTML = 'Subscribe';
-  }
+      const buttonElement= document.querySelector('.Subscribe');
+      if (buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed';
+      }
+      else{
+        buttonElement.innerHTML = 'Subscribe';
+      }
 
     }
   </script>
