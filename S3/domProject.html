@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Youtube-landing</title>
+<head><title>Youtube-landing</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      padding-bottom: 110px;
+    }
+    .Subscribe{
+      background-color: black;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-style: none;
+      border-radius: 20px;
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+    .js-total-cost{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    
+
+
+    
+  </style>
 </head>
 <body>
+
   <p class="first-line">YouTube Subscribe Button</p>
-  <button onclick="subscribe();" class="Subscribe">
-Subscribe</button>
-  <p>Rock Paper Scissors</p>
-  <a href="http://127.0.0.1:5500/S2/rps2.html">Click here</a>
+
+  <button onclick="subscribe();" class="Subscribe">Subscribe</button>
 
   <p>Amazon Shipping Calculator</p>
-  <input placeholder="Cost of order" class="js-cost-input">
-  <button onclick="
-  calculateTotal();
-  ">Calculate</button>
+
+  <p>Orders under $40 = +$10 shipping.</p>
+
+  <p>Orders over $40 = FREE shipping. </p>
+
+  <input 
+  placeholder="Cost of order" 
+  class="js-cost-input" 
+  onkeydown="enterKeyDown(event)">
+
+  <button onclick="calculateTotal();">Calculate</button>
+
+  <p class="js-total-cost"></p>
+
+  <p>Rock Paper Scissors</p>
+
+  <a href="http://127.0.0.1:5500/S2/rps2.html">Click here</a>
 
   <script>
+    function enterKeyDown(event){
+      if (event.key==='Enter'){
+        calculateTotal();
+  }
+    }
+
     function calculateTotal(){
       const inputElement = document.querySelector('.js-cost-input');  
-      const cost = inputElement.value;                                 
+      let cost = Number(inputElement.value); //dom input will always be string type
+      if (cost<40){
+        cost  +=10;
+      }
+      document.querySelector(".js-total-cost").innerHTML=`$${cost}`;
+    }
 
-    } 
-    function subscribe(){
-      
+    function subscribe(){      
       const buttonElement= document.querySelector('.Subscribe');
       if (buttonElement.innerText === 'Subscribe'){
         buttonElement.innerHTML = 'Subscribed';
       }
       else{
         buttonElement.innerHTML = 'Subscribe';
-      }
+      }}
 
-    }
   </script>
 </body>
-
-
 </html>
