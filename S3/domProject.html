@@ -17,18 +17,31 @@
       border-radius: 20px;
       font-weight: 700;
       margin-bottom: 35px;
+      cursor: pointer;
     }
-    .js-total-cost{
+    .js-cost-input{
       padding-top: 10px;
       padding-bottom: 10px;
+      font-size: large;
     }
+    .Calculate-button{
+      color: white;
+      background-color: green;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: large;
+      padding-left: 14px;
+      padding-right: 14px;
+      border: none;
+      margin-bottom: 35px;
+      cursor: pointer;
+    }
+  
 
-    
-
-
-    
   </style>
 </head>
+
+
 <body>
 
   <p class="first-line">YouTube Subscribe Button</p>
@@ -46,7 +59,7 @@
   class="js-cost-input" 
   onkeydown="enterKeyDown(event)">
 
-  <button onclick="calculateTotal();">Calculate</button>
+  <button class="Calculate-button" onclick="calculateTotal();">Calculate</button>
 
   <p class="js-total-cost"></p>
 
