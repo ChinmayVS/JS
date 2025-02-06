@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    
+
+  <head>
+    <title>Advanced-function</title>
+  </head>
+
+  <body>
+    <script>
+      /*
+
+      let function1 = function greeting(){ //here greeting() is a anon function and is not defined
+        console.log("hello");
+      }
+      function1();
+      greeting();
+
+      // a normal function call is similar to this
+      // greeting(); wouldnt work because var has no hoisting 
+      var greeting = function() {
+        console.log('hello');
+      }
+
+      */
+
+      //for async code run this bit code 3s later
+      setTimeout(function(){
+        console.log("hello");
+      },
+      3000);
+      console.log("HHHi");
+      //looping every 3s
+      setInterval(function(){
+        console.log("hello");
+      },
+      3000); 
+
+
+
+    </script>
+  </body>
+
+</html>
